@@ -64,7 +64,7 @@ public class RestService {
 	 
 			// Enter your correct gmail UserID and Password
 			// if you have 2FA enabled then provide App Specific Password
-			transport.connect("smtp.gmail.com", "shishirsandeep7@gmail.com", "abkowglgvlojyilv");
+			transport.connect("smtp.gmail.com", "email_id", "ur password");
 			transport.sendMessage(generateMailMessage, generateMailMessage.getAllRecipients());
 			transport.close();
 	   
