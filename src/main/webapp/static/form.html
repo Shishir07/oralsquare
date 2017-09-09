@@ -1,0 +1,49 @@
+<html>
+  <body>
+  <div class="form-container">
+	<form class="contact_form"  id = "myform" ng-controller="FormCtrl" ng-submit="submitForm()" name="contact_form" formenctype="application/x-www-form-urlencoded">
+		<ul>
+		    <li>
+		         <h2>Book An Appointment</h2>
+		         <span class="required_notification">* Denotes Required Field</span>
+		    </li>
+		    <li>
+		        <label for="name">Name:</label>
+		        <input type="text" name="name" ng-model="formData.name" placeholder="John Doe" required/>
+		    </li>
+		    <li>
+		        <label for="number">Mobile:</label>
+		        <input type="text" size="10" name="phone" ng-model="formData.phone" required/>
+		    </li>
+		    <li>
+			     <label for="email">Email:</label>
+			     <input type="text" name="email" placeholder="john_doe@example.com" ng-model="formData.email" required/>
+			     <span class="form_hint">Proper format "name@something.com"</span>
+			 </li>
+			 <li>
+			     <label for="slot">Preferred Date</label>
+			     <input type="date" name="slot" ng-model="formData.slot" required/>
+			 </li>
+			 <li>
+			     <label for="time">Preferred Time</label>
+			     <select ng-model="formData.time">
+				  <option value="10.00 AM" selected>10.00 AM</option>
+				  <option value="11.00 AM">11.00 AM</option>
+				  <option value="12.00 PM">12.00 PM</option>
+				  <option value="1.00 PM">1.00 PM</option>
+				  <option value="5.30 PM">5.30 PM</option>
+				  <option value="6.30 PM">6.30 PM</option>
+				</select> 
+			 </li>
+			 <li>
+			     <label for="message">Details:</label>
+			     <textarea name="message" cols="40" rows="6" ng-model="formData.message"></textarea>
+			 </li>
+			 <li>
+			     <button class="submit" type="submit">Submit Form</button>
+			 </li>
+		</ul>
+	</form>
+</div>
+</body>
+</html>
